@@ -67,7 +67,7 @@
         },
         {  
             "name": "comment.assembly",
-            "match": "(\\s)*;.*$"
+            "match": "(\\s)*!.*$"
         },
         {  
             "name": "source.assembly",
