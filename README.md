@@ -1,10 +1,11 @@
-sublimeassembly
+sublimeassembly - as88 fork
 ===============
+Forked from <https://github.com/Nessphoro/sublimeassembly>
+
 Also available on Package Control as NASM x86 Assembly 
 
 Provides actually decent code highlighting for x86-64 assembly in Sublime Text / TextMate.
 It includes full x86-64 instruction set, along with all NASM directives.
-
 
 Copyright (c) 2013, Nessphoro
 All rights reserved.
@@ -30,5 +31,3 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
