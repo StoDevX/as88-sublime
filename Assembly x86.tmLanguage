@@ -53,10 +53,8 @@
 			<string>string.assembly</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>^\[</string>
-			<key>end</key>
-			<string>\]</string>
+			<key>match</key>
+			<string>\b(?i)([1-9](b|f))\b</string>
 			<key>name</key>
 			<string>support.function.directive.assembly</string>
 		</dict>
