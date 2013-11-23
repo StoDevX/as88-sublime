@@ -4,7 +4,6 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>asm</string>
 		<string>s</string>
 	</array>
 	<key>name</key>
