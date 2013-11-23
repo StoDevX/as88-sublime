@@ -1,6 +1,7 @@
 {
     "fileTypes": [
-        "asm"
+        "asm",
+        "s"
     ], 
     "name": "Assembly x86 (NASM)", 
     "patterns": [
