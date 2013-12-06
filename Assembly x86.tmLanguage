@@ -91,9 +91,9 @@
 						|vfnmusbss|vbroadcastss|vbroadcastsd|vbroadcastf128
 						|vmaskmovps|vmaskmovpd|cvt|xor|cli|sti|hlt|nop|lock|wait
 						|enter|leave|ret|loop(n?e|n?z)?|call
-						|j(mp|n?e|n?ge?|n?ae?|le?|be?|n?o|n?z|n?c|n?p))\b
-
-					</string>
+						|j(mp|n?e|n?ge?|n?ae?|le?|be?|n?o|n?z|n?c|n?p)
+					)\b
+				</string>
 			<key>name</key>
 			<string>keyword.control.assembly</string>
 		</dict>
