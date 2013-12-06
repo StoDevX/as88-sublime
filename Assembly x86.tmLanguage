@@ -14,7 +14,6 @@
 			<key>match</key>
 			<string>
 					\b(?i)(v)?(
-
 						aaa|aad|aam|aas|adc|add|addpd|addps|addsd|addss|addsubpd
 						|addsubps|aesdec|aesdeclast|aesenc|aesenclast|aesimc
 						|aeskeygenassist|and|andpd|andps|andnpd|andnps|arpl
