@@ -207,21 +207,105 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(?i)(
-				%define|%ifndef|%xdefine|%idefine|%undef|%assign|%defstr|%strcat
-				|%strlen|%substr|%00|%0|%rotate|%rep|%endrep|%include|\$\$|\$
-				|%unmacro|%if|%elif|%else|%endif|%(el)?ifdef|%(el)?ifmacro
-				|%(el)?ifctx|%(el)?ifidn|%(el)?ifidni|%(el)?ifid|%(el)?ifnum
-				|%(el)?ifstr|%(el)?iftoken|%(el)?ifempty|%(el)?ifenv|%pathsearch
-				|%depend|%use|%push|%pop|%repl|%arg|%stacksize|%local|%error
-				|%warning|%fatal|%line|%!|%comment|%endcomment
-				|__NASM_VERSION_ID__|__NASM_VER__|__FILE__|__LINE__|__BITS__
-				|__OUTPUT_FORMAT__|__DATE__|__TIME__|__DATE_NUM__|_TIME__NUM__
-				|__UTC_DATE__|__UTC_TIME__|__UTC_DATE_NUM__|__UTC_TIME_NUM__
-				|__POSIX_TIME__|__PASS__|ISTRUC|AT|IEND|BITS 16|BITS 32|BITS 64
-				|USE16|USE32|__SECT__|ABSOLUTE|EXTERN|GLOBAL|COMMON|CPU|FLOAT
-				|_STDOUT|_GETCHAR|_WRITE|_STDIN|_EXIT|\.SECT \.....?)\b
-				?([_a-zA-Z][_a-zA-Z0-9]*)?
+			<string>(?x)              # Expanded mode (ignore whitespace)
+				\s* (?i)
+				(	# (1 start)
+					  %define
+					| %ifndef
+					| %xdefine
+					| %idefine
+					| %undef
+					| %assign
+					| %defstr
+					| %strcat
+					| %strlen
+					| %substr
+					| %0 0?
+					| %rotate
+					| %rep
+					| %endrep
+					| %include
+					| \$ \$?
+					| %unmacro
+					| %if
+					| %elif
+					| %else
+					| %endif
+					| %
+						(?: el )?
+						(?:
+							  ifdef
+							| ifmacro
+							| ifctx
+							| ifidn
+							| ifidni
+							| ifid
+							| ifnum
+							| ifstr 
+							| iftoken
+							| ifempty
+							| ifenv 
+						)
+					| %pathsearch
+					| %depend
+					| %use
+					| %push
+					| %pop
+					| %repl
+					| %arg
+					| %stacksize
+					| %local
+					| %error
+					| %warning
+					| %fatal
+					| %line
+					| %!
+					| %comment
+					| %endcomment
+					| __NASM_VERSION_ID__
+					| __NASM_VER__
+					| __FILE__
+					| __LINE__
+					| __BITS__
+					| __OUTPUT_FORMAT__
+					| __DATE__
+					| __TIME__
+					| __DATE_NUM__
+					| _TIME__NUM__
+					| __UTC_DATE__
+					| __UTC_TIME__
+					| __UTC_DATE_NUM__
+					| __UTC_TIME_NUM__
+					| __POSIX_TIME__
+					| __PASS__
+					| ISTRUC
+					| AT
+					| IEND
+					| BITS16
+					| BITS32
+					| BITS64
+					| USE16
+					| USE32
+					| __SECT__
+					| ABSOLUTE
+					| EXTERN
+					| GLOBAL
+					| COMMON
+					| CPU
+					| FLOAT
+					| _STDIN
+					| _STDOUT
+					| _STDERR
+					| _GETCHAR
+					| _READ
+					| _WRITE
+					| _SPRINTF
+					| _EXIT
+					| \.SECT\. . . . .? 
+				)	# (1 end)
+				(?-i)
+				\b\ ? 
+				( [_a-zA-Z] [_a-zA-Z0-9]* )?	# (2)
 			</string>
 		</dict>
 		<dict>
